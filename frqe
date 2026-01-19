@@ -1,0 +1,6 @@
+def get_middle_cost(df, radek, sloupec):
+    return df.loc[radek, sloupec]
+
+
+cost = get_middle_cost(df, radek, sloupec)
+print(cost)
