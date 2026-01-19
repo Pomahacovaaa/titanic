@@ -1,0 +1,15 @@
+def vybarvi_3x3(data, radek, sloupec):
+    styles = pd.DataFrame("", index=data.index, columns=data.columns)
+
+    r = radek
+    s = int(sloupec)
+
+    for dr in [-1, 0, 1]:
+        for ds in [-1, 0, 1]:
+            rr = r + dr
+            ss = s + ds
+
+            if rr in data.index and str(ss) in data.columns:
+                styles.loc[rr, str(ss)] = "background-color: lightgreen"
+
+    return styles
